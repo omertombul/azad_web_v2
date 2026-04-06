@@ -1,9 +1,6 @@
-import Database from 'better-sqlite3'
-import { fileURLToPath } from 'url'
-import path from 'path'
+import { PrismaClient } from '@prisma/client'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const db = new Database(path.join(__dirname, '..', 'dev.db'))
+const prisma = new PrismaClient()
 
 const PROJECTS = [
   { title: "Modern Kitchen Overhaul", year: 2024, category: "Kitchen", description: "Complete gut-renovation of a dated 1990s kitchen. New custom shaker cabinets, quartz waterfall island, under-cabinet lighting, and herringbone backsplash tile.", image: "https://images.unsplash.com/photo-1771862956702-4e8b247e28b5?w=800&q=80", images: JSON.stringify(["https://images.unsplash.com/photo-1771862956702-4e8b247e28b5?w=800&q=80","https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80","https://images.unsplash.com/photo-1600585152220-90363fe7e115?w=800&q=80"]) },
@@ -37,20 +34,23 @@ const SERVICES = [
   { title: "Gutter & Exterior Cleaning", description: "Gutter installation, cleaning, and pressure washing.", icon: "gutter" },
 ]
 
-console.log('Seeding database...')
+async function main() {
+  console.log('Seeding database...')
 
-db.exec('DELETE FROM Project')
-db.exec('DELETE FROM Service')
+  await prisma.project.deleteMany()
+  await prisma.service.deleteMany()
 
-const insertProject = db.prepare('INSERT INTO Project (title, year, category, description, image, images) VALUES (?, ?, ?, ?, ?, ?)')
-for (const p of PROJECTS) {
-  insertProject.run(p.title, p.year, p.category, p.description, p.image, p.images)
+  for (const project of PROJECTS) {
+    await prisma.project.create({ data: project })
+  }
+
+  for (const service of SERVICES) {
+    await prisma.service.create({ data: service })
+  }
+
+  console.log(`Seeded ${PROJECTS.length} projects and ${SERVICES.length} services`)
 }
 
-const insertService = db.prepare('INSERT INTO Service (title, description, icon) VALUES (?, ?, ?)')
-for (const s of SERVICES) {
-  insertService.run(s.title, s.description, s.icon)
-}
-
-console.log(`Seeded ${PROJECTS.length} projects and ${SERVICES.length} services`)
-db.close()
+main()
+  .catch((e) => { console.error(e); process.exit(1) })
+  .finally(() => prisma.$disconnect())

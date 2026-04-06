@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "projects": "Projets",
+    "contact": "Contact",
+    "getQuote": "Obtenir un devis"
+  },
+  "hero": {
+    "badge": "Licencié et cautionné depuis 1998",
+    "title": "Votre maison, magnifiquement réinventée",
+    "subtitle": "Des rénovations de cuisines aux transformations complètes, Azad Rénovations offre un savoir-faire exceptionnel, des prix transparents et des résultats dont vous profiterez pendant des années.",
+    "cta": "Estimation gratuite",
+    "secondary": "Voir nos réalisations"
+  },
+  "stats": {
+    "homes": "Maisons transformées",
+    "experience": "Années d'expérience",
+    "homeowners": "Propriétaires satisfaits",
+    "reviews": "Avis 5 étoiles"
+  },
+  "about": {
+    "label": "À propos",
+    "title": "Spécialistes en rénovation à Montréal",
+    "subtitle": "Depuis 2005, Azad Rénovations a aidé des centaines de familles de la région de Montréal à transformer leur maison en celle dont elles ont toujours rêvé.",
+    "description": "Nous sommes une entreprise familiale, licenciée et assurée, avec une équipe de gens de métier qualifiés qui prennent soin de votre maison autant que vous. Chaque projet commence par une consultation gratuite à domicile et se termine par une visite dont vous serez fier.",
+    "bullet1": "Licencié, cautionné et assuré",
+    "bullet2": "Consultations gratuites à domicile",
+    "bullet3": "Prix transparents et détaillés",
+    "bullet4": "Chantier propre — chaque jour",
+    "cta": "Planifier une consultation gratuite",
+    "imageAlt": "Rénovation en cours"
+  },
+  "servicesPreview": {
+    "label": "Nos services",
+    "title": "Nos services de rénovation",
+    "subtitle": "Cuisines, salles de bain, aménagement paysager, toiture, électricité, plomberie et bien plus — le tout par une seule équipe locale de confiance.",
+    "viewAll": "Voir tous les services"
+  },
+  "projectsPreview": {
+    "label": "Réalisations récentes",
+    "title": "Maisons que nous avons transformées",
+    "subtitle": "Chaque projet est unique. Voici un aperçu de nos récentes rénovations dans la grande région de Montréal.",
+    "viewAll": "Voir tous les projets"
+  },
+  "ctaBanner": {
+    "title": "Prêt à rénover votre maison?",
+    "subtitle": "Contactez-nous aujourd'hui pour une consultation gratuite à domicile. Sans pression — juste des conseils honnêtes et une estimation claire.",
+    "cta": "Réserver une consultation gratuite →"
+  },
+  "servicesPage": {
+    "label": "Ce que nous offrons",
+    "title": "Nos services de rénovation",
+    "subtitle": "Cuisines, salles de bain, sous-sols, aménagement paysager, toiture, électricité, plomberie et bien plus — le tout par une seule équipe locale de confiance.",
+    "gridLabel": "Services",
+    "gridTitle": "Tout ce dont votre maison a besoin",
+    "gridSubtitle": "Des rénovations intérieures à l'aménagement extérieur — nous gérons tous les corps de métier sous un même toit pour que vous n'ayez besoin que d'un seul entrepreneur de confiance.",
+    "loading": "Chargement des services..."
+  },
+  "whyUs": {
+    "label": "Pourquoi Azad",
+    "title": "Pourquoi les propriétaires nous choisissent",
+    "item1Title": "Entreprise familiale et locale",
+    "item1Desc": "Nous sommes une entreprise familiale de la région de Montréal — vos voisins, votre communauté.",
+    "item2Title": "Prix transparents",
+    "item2Desc": "Des estimations détaillées et détaillées sans frais cachés ni ordres de modification surprise.",
+    "item3Title": "Chantiers propres",
+    "item3Desc": "Nous protégeons votre maison chaque jour, nettoyons derrière nous et respectons votre espace.",
+    "item4Title": "Garantie de satisfaction",
+    "item4Desc": "Nous garantissons chaque projet avec une garantie de main-d'œuvre et un support après-projet."
+  },
+  "servicesCta": {
+    "title": "Prêt à rénover?",
+    "subtitle": "Réservez une consultation gratuite à domicile et discutons de la concrétisation de vos idées de rénovation.",
+    "cta": "Contactez-nous aujourd'hui"
+  },
+  "projectsPage": {
+    "label": "Notre portfolio",
+    "title": "Projets de rénovation",
+    "subtitle": "Des rénovations de cuisine aux transformations complètes — chaque projet reflète notre engagement envers la qualité et la vision de nos clients.",
+    "loading": "Chargement des projets...",
+    "filterAll": "Tous",
+    "filterKitchen": "Cuisine",
+    "filterBathroom": "Salle de bain",
+    "filterBasement": "Sous-sol",
+    "filterInterior": "Intérieur",
+    "filterAddition": "Ajout"
+  },
+  "contactPage": {
+    "label": "Nous joindre",
+    "title": "Parlons rénovation",
+    "subtitle": "Décrivez-nous votre projet et nous planifierons une consultation gratuite à domicile au moment qui vous convient.",
+    "estimateTitle": "Obtenez une estimation gratuite",
+    "estimateDesc": "Remplissez le formulaire et l'un de nos spécialistes en rénovation vous contactera dans un délai de 1 jour ouvrable pour discuter de votre projet et planifier une visite gratuite à domicile.",
+    "phone": "Téléphone",
+    "email": "Courriel",
+    "office": "Bureau",
+    "hours": "Heures",
+    "officeValue": "Desservant Montréal et les environs",
+    "hoursValue": "Lun–Ven: 7h–18h  |  Sam: 8h–14h",
+    "mapBadge": "Desservant le Grand Montréal et les environs",
+    "formTitle": "Envoyez-nous un message"
+  },
+  "contactForm": {
+    "name": "Nom complet *",
+    "namePlaceholder": "Jean Tremblay",
+    "email": "Adresse courriel *",
+    "emailPlaceholder": "jean@exemple.com",
+    "phone": "Numéro de téléphone",
+    "phonePlaceholder": "(514) 555-0100",
+    "message": "Message *",
+    "messagePlaceholder": "Décrivez-nous votre projet...",
+    "sending": "Envoi en cours...",
+    "send": "Envoyer le message",
+    "error": "Une erreur s'est produite. Veuillez réessayer ou nous appeler directement."
+  },
+  "footer": {
+    "description": "Spécialistes en rénovation domiciliaire de confiance à Montréal depuis 2005. Nous transformons cuisines, salles de bain, sous-sols et espaces de vie avec un savoir-faire sur lequel vous pouvez compter.",
+    "quickLinks": "Liens rapides",
+    "contactUs": "Contactez-nous",
+    "serving": "Desservant Montréal et les environs",
+    "schedule": "Lun–Ven: 8h00 – 18h00",
+    "scheduleSat": "Sam: 9h00 – 15h00",
+    "copyright": "© {year} Azad Rénovations. Tous droits réservés.",
+    "bottom": "Licencié · Cautionné · Assuré · Desservant le Grand Montréal"
+  }
+}

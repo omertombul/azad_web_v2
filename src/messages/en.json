@@ -1,0 +1,127 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Licensed & Bonded Since 1998",
+    "title": "Your Home, Beautifully Reimagined",
+    "subtitle": "From kitchen remodels to full home makeovers, Azad Home Renovations delivers exceptional craftsmanship, transparent pricing, and results you'll love for years to come.",
+    "cta": "Get a Free Estimate",
+    "secondary": "See Our Work"
+  },
+  "stats": {
+    "homes": "Homes Transformed",
+    "experience": "Years of Experience",
+    "homeowners": "Happy Homeowners",
+    "reviews": "5-Star Reviews"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "Montreal's Home Renovation Specialists",
+    "subtitle": "Since 2005, Azad Home Renovations has helped hundreds of Montreal-area families transform their houses into the homes they've always dreamed of.",
+    "description": "We are a family-owned, licensed, and insured renovation company with a team of skilled tradespeople who care about your home as much as you do. Every project begins with a free in-home consultation and ends with a walkthrough you'll be proud of.",
+    "bullet1": "Licensed, Bonded & Insured",
+    "bullet2": "Free In-Home Consultations",
+    "bullet3": "Transparent, Itemized Pricing",
+    "bullet4": "Clean Jobsite — Every Day",
+    "cta": "Schedule a Free Consultation",
+    "imageAlt": "Home renovation in progress"
+  },
+  "servicesPreview": {
+    "label": "What We Do",
+    "title": "Our Renovation Services",
+    "subtitle": "Kitchens, bathrooms, landscaping, roofing, electrical, plumbing, and much more — all from one trusted local team.",
+    "viewAll": "View All Services"
+  },
+  "projectsPreview": {
+    "label": "Recent Work",
+    "title": "Homes We've Transformed",
+    "subtitle": "Every project is unique. Here's a look at some of our recent renovation work across Greater Montreal.",
+    "viewAll": "View All Projects"
+  },
+  "ctaBanner": {
+    "title": "Ready to Renovate Your Home?",
+    "subtitle": "Contact us today for a free in-home consultation. No pressure — just honest advice and a clear estimate.",
+    "cta": "Book a Free Consultation →"
+  },
+  "servicesPage": {
+    "label": "What We Offer",
+    "title": "Our Renovation Services",
+    "subtitle": "Kitchens, bathrooms, basements, landscaping, roofing, electrical, plumbing and much more — all from one trusted local team.",
+    "gridLabel": "Services",
+    "gridTitle": "Everything Your Home Needs",
+    "gridSubtitle": "From interior remodels to outdoor landscaping — we handle every trade under one roof so you only need one trusted contractor.",
+    "loading": "Loading services..."
+  },
+  "whyUs": {
+    "label": "Why Azad",
+    "title": "Why Homeowners Choose Us",
+    "item1Title": "Family-Owned & Local",
+    "item1Desc": "We are a Montreal-area family business — your neighbors, your community.",
+    "item2Title": "Transparent Pricing",
+    "item2Desc": "Detailed, itemized estimates with no hidden fees or surprise change orders.",
+    "item3Title": "Clean Worksites",
+    "item3Desc": "We protect your home daily, clean up after ourselves, and respect your space.",
+    "item4Title": "Satisfaction Guarantee",
+    "item4Desc": "We stand behind every project with a workmanship warranty and post-project support."
+  },
+  "servicesCta": {
+    "title": "Ready to Renovate?",
+    "subtitle": "Book a free in-home consultation and let's talk about turning your renovation ideas into reality.",
+    "cta": "Contact Us Today"
+  },
+  "projectsPage": {
+    "label": "Our Portfolio",
+    "title": "Renovation Projects",
+    "subtitle": "From kitchen remodels to full home makeovers — every project is a reflection of our commitment to quality and our clients' vision.",
+    "loading": "Loading projects...",
+    "filterAll": "All",
+    "filterKitchen": "Kitchen",
+    "filterBathroom": "Bathroom",
+    "filterBasement": "Basement",
+    "filterInterior": "Interior",
+    "filterAddition": "Addition"
+  },
+  "contactPage": {
+    "label": "Get In Touch",
+    "title": "Let's Talk Renovations",
+    "subtitle": "Tell us about your project and we'll schedule a free in-home consultation at a time that works for you.",
+    "estimateTitle": "Get a Free Estimate",
+    "estimateDesc": "Fill out the form and one of our renovation specialists will reach out within 1 business day to discuss your project and schedule a free in-home visit.",
+    "phone": "Phone",
+    "email": "Email",
+    "office": "Office",
+    "hours": "Hours",
+    "officeValue": "Serving Montreal & Surrounding Areas",
+    "hoursValue": "Mon–Fri: 7am–6pm  |  Sat: 8am–2pm",
+    "mapBadge": "Serving Greater Montreal & Surrounding Areas",
+    "formTitle": "Send Us a Message"
+  },
+  "contactForm": {
+    "name": "Full Name *",
+    "namePlaceholder": "John Smith",
+    "email": "Email Address *",
+    "emailPlaceholder": "john@example.com",
+    "phone": "Phone Number",
+    "phonePlaceholder": "(514) 555-0100",
+    "message": "Message *",
+    "messagePlaceholder": "Tell us about your project...",
+    "sending": "Sending...",
+    "send": "Send Message",
+    "error": "Something went wrong. Please try again or call us directly."
+  },
+  "footer": {
+    "description": "Montreal's trusted home renovation specialists since 2005. We transform kitchens, bathrooms, basements, and living spaces with craftsmanship you can count on.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "serving": "Serving Montreal & Surrounding Areas",
+    "schedule": "Mon–Fri: 8:00 AM – 6:00 PM",
+    "scheduleSat": "Sat: 9:00 AM – 3:00 PM",
+    "copyright": "© {year} Azad Home Renovations. All rights reserved.",
+    "bottom": "Licensed · Bonded · Insured · Serving Greater Montreal"
+  }
+}

@@ -49,7 +49,7 @@ export default function ContactForm() {
     }
   }
 
-  const inputClass = 'w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-lightgray/50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-gold/30 focus:border-brand-gold/50 transition-all duration-300 placeholder-gray-400'
+  const inputClass = 'w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-brand-lightgray/50 text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-brand-dark/30 focus:border-brand-dark/50 transition-all duration-300 placeholder-gray-400'
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5">
@@ -80,7 +80,7 @@ export default function ContactForm() {
         )}
       </AnimatePresence>
 
-      <button type="submit" disabled={loading} className="w-full bg-brand-gold text-brand-dark font-bold py-4 rounded-xl hover:bg-brand-darkgold transition-all duration-300 text-sm disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-brand-gold/10 hover:shadow-xl hover:shadow-brand-gold/20">
+      <button type="submit" disabled={loading} className="w-full bg-brand-dark text-white font-bold py-4 rounded-xl hover:bg-brand-gray transition-all duration-300 text-sm disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-brand-dark/10 hover:shadow-xl hover:shadow-brand-dark/20">
         {loading ? (
           <span className="inline-flex items-center gap-2">
             <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24"><circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /><path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" /></svg>

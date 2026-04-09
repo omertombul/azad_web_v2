@@ -41,12 +41,12 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 md:h-24">
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
             <div className="relative">
-              <img src="/images/logo.png" alt="AZAD Construction" className="h-12 md:h-14 w-auto rounded-lg transition-transform duration-300 group-hover:scale-105" />
+              <img src="/images/logo.png" alt="AZAD Construction" className="h-24 md:h-[120px] w-auto rounded-lg transition-transform duration-300 group-hover:scale-105" />
               <div className="absolute inset-0 rounded-lg ring-1 ring-white/10" />
             </div>
             <div className="flex flex-col">
               <span className="text-gradient font-black text-xl md:text-2xl leading-none tracking-tight">AZAD</span>
-              <span className="text-white/60 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Constructions</span>
+              <span className="text-white/60 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Constructions INC.</span>
             </div>
           </Link>
 
@@ -65,7 +65,7 @@ export default function Navbar() {
             <button onClick={toggleLang} className="text-[11px] font-semibold border border-white/15 px-3 py-1.5 rounded-full text-white/50 hover:text-white hover:border-brand-gold/50 transition-all duration-300">
               {locale === 'fr' ? 'EN' : 'FR'}
             </button>
-            <Link href="/contact" className="relative bg-brand-gold text-brand-dark font-bold px-6 py-2.5 rounded-full text-xs tracking-wide hover:bg-brand-darkgold transition-all duration-300 hover:shadow-lg hover:shadow-brand-gold/20">
+            <Link href="/contact" className="relative bg-white text-brand-dark font-bold px-6 py-2.5 rounded-full text-xs tracking-wide hover:bg-brand-darkgold transition-all duration-300 hover:shadow-lg hover:shadow-white/20">
               {t('nav.getQuote')}
             </Link>
           </div>
@@ -98,7 +98,7 @@ export default function Navbar() {
                 </button>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: (navLinks.length + 1) * 0.05 }} className="pt-3">
-                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block bg-brand-gold text-brand-dark font-bold px-4 py-3.5 rounded-xl text-center text-sm tracking-wide hover:bg-brand-darkgold transition-colors">
+                <Link href="/contact" onClick={() => setMenuOpen(false)} className="block bg-white text-brand-dark font-bold px-4 py-3.5 rounded-xl text-center text-sm tracking-wide hover:bg-brand-darkgold transition-colors">
                   {t('nav.getQuote')}
                 </Link>
               </motion.div>

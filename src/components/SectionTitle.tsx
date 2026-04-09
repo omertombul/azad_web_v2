@@ -19,10 +19,10 @@ export default function SectionTitle({ label, title, subtitle, centered = true, 
       className={`mb-16 ${centered ? 'text-center max-w-2xl mx-auto' : 'max-w-2xl'}`}
     >
       {label && (
-        <span className="inline-flex items-center gap-2 text-brand-gold font-semibold uppercase tracking-[0.2em] text-[11px] mb-4">
-          <span className="w-8 h-px bg-brand-gold/50" />
+        <span className={`inline-flex items-center gap-2 font-semibold uppercase tracking-[0.2em] text-[11px] mb-4 ${light ? 'text-white/80' : 'text-brand-dark/60'}`}>
+          <span className={`w-8 h-px ${light ? 'bg-white/40' : 'bg-brand-dark/30'}`} />
           {label}
-          <span className="w-8 h-px bg-brand-gold/50" />
+          <span className={`w-8 h-px ${light ? 'bg-white/40' : 'bg-brand-dark/30'}`} />
         </span>
       )}
       <h2 className={`text-3xl sm:text-4xl font-black leading-tight ${light ? 'text-white' : 'text-brand-dark'}`}>

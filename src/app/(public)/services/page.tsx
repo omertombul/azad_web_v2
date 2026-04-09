@@ -29,10 +29,10 @@ export default function Services() {
         <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="absolute inset-0 z-1 bg-gradient-to-b from-brand-dark/90 via-brand-dark/75 to-brand-dark/95" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/3 rounded-full blur-[120px] z-2" />
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-2" style={{ backgroundImage: 'linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-2" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl mx-auto px-4 relative z-10 pt-12">
-          <span className="inline-flex items-center gap-2 text-brand-gold/80 text-[11px] font-semibold uppercase tracking-[0.2em] mb-4">
-            <span className="w-8 h-px bg-brand-gold/40" />{t('servicesPage.label')}<span className="w-8 h-px bg-brand-gold/40" />
+          <span className="inline-flex items-center gap-2 text-white/80 text-[11px] font-semibold uppercase tracking-[0.2em] mb-4">
+            <span className="w-8 h-px bg-white/40" />{t('servicesPage.label')}<span className="w-8 h-px bg-white/40" />
           </span>
           <h1 className="text-4xl sm:text-6xl font-black mb-5">{t('servicesPage.title')}</h1>
           <p className="text-white/50 text-lg max-w-xl mx-auto">{t('servicesPage.subtitle')}</p>
@@ -80,7 +80,7 @@ export default function Services() {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative max-w-2xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-black text-white mb-5">{t('servicesCta.title')}</h2>
           <p className="text-white/40 mb-10 text-base leading-relaxed">{t('servicesCta.subtitle')}</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark font-bold px-10 py-4 rounded-full hover:bg-brand-darkgold transition-all duration-300 shadow-lg shadow-brand-gold/20 hover:shadow-xl hover:shadow-brand-gold/30 text-sm">
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-brand-dark font-bold px-10 py-4 rounded-full hover:bg-brand-darkgold transition-all duration-300 shadow-lg shadow-white/20 hover:shadow-xl hover:shadow-white/30 text-sm">
             {t('servicesCta.cta')}
           </Link>
         </motion.div>

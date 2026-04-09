@@ -31,10 +31,10 @@ export default function Contact() {
         <div className="absolute inset-0 z-0" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&q=80)', backgroundSize: 'cover', backgroundPosition: 'center' }} />
         <div className="absolute inset-0 z-1 bg-gradient-to-b from-brand-dark/90 via-brand-dark/75 to-brand-dark/95" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-gold/3 rounded-full blur-[120px] z-2" />
-        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-2" style={{ backgroundImage: 'linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
+        <div className="absolute inset-0 opacity-[0.03] pointer-events-none z-2" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="max-w-3xl mx-auto px-4 relative z-10 pt-12">
-          <span className="inline-flex items-center gap-2 text-brand-gold/80 text-[11px] font-semibold uppercase tracking-[0.2em] mb-4">
-            <span className="w-8 h-px bg-brand-gold/40" />{t('contactPage.label')}<span className="w-8 h-px bg-brand-gold/40" />
+          <span className="inline-flex items-center gap-2 text-white/80 text-[11px] font-semibold uppercase tracking-[0.2em] mb-4">
+            <span className="w-8 h-px bg-white/40" />{t('contactPage.label')}<span className="w-8 h-px bg-white/40" />
           </span>
           <h1 className="text-4xl sm:text-6xl font-black mb-5">{t('contactPage.title')}</h1>
           <p className="text-white/50 text-lg max-w-xl mx-auto">{t('contactPage.subtitle')}</p>
@@ -52,11 +52,11 @@ export default function Contact() {
               <div className="space-y-4">
                 {contactInfo.map((item, i) => (
                   <motion.div key={item.label} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: i * 0.1 }} className="flex items-start gap-4 group">
-                    <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center text-brand-gold flex-shrink-0 shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300">{item.icon}</div>
+                    <div className="w-11 h-11 bg-white rounded-xl flex items-center justify-center text-brand-dark flex-shrink-0 shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-300">{item.icon}</div>
                     <div>
                       <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-gray-400 mb-0.5">{item.label}</p>
                       {item.href ? (
-                        <a href={item.href} className="text-brand-dark font-semibold hover:text-brand-darkgold transition-colors text-sm">{item.value}</a>
+                        <a href={item.href} className="text-brand-dark font-semibold hover:text-brand-dark transition-colors text-sm">{item.value}</a>
                       ) : (
                         <p className="text-brand-dark font-semibold text-sm">{item.value}</p>
                       )}

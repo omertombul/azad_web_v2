@@ -35,16 +35,16 @@ export default function ServiceCard({ service, index = 0 }: ServiceCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-50px' }}
       transition={{ duration: 0.5, delay: index * 0.08 }}
-      className="group relative bg-white rounded-2xl p-7 border border-gray-100/80 hover:border-brand-gold/20 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+      className="group relative bg-white rounded-2xl p-7 border border-gray-100/80 hover:border-brand-dark/20 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
     >
-      <div className="w-12 h-12 bg-brand-cream rounded-xl flex items-center justify-center text-brand-gold mb-5 group-hover:bg-brand-gold group-hover:text-white transition-all duration-400 group-hover:scale-110 group-hover:rotate-3">
+      <div className="w-12 h-12 bg-brand-dark/5 rounded-xl flex items-center justify-center text-brand-dark mb-5 group-hover:bg-brand-dark group-hover:text-white transition-all duration-400 group-hover:scale-110 group-hover:rotate-3">
         {iconMap[service.icon] ?? iconMap['building']}
       </div>
-      <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-darkgold transition-colors duration-300">
+      <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-dark transition-colors duration-300">
         {service.title}
       </h3>
       <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
-      <div className="mt-4 flex items-center gap-1 text-brand-gold text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
+      <div className="mt-4 flex items-center gap-1 text-brand-dark text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
         <span>Learn more</span>
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

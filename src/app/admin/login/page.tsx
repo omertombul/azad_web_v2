@@ -50,7 +50,7 @@ export default function Login() {
               {error}
             </div>
           )}
-          <button type="submit" disabled={!password || loading} className="w-full bg-brand-gold text-brand-dark font-bold py-3.5 rounded-xl text-sm hover:bg-brand-darkgold transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
+          <button type="submit" disabled={!password || loading} className="w-full bg-white text-brand-dark font-bold py-3.5 rounded-xl text-sm hover:bg-brand-darkgold transition-colors disabled:opacity-50 flex items-center justify-center gap-2">
             {loading ? (<><div className="w-4 h-4 border-2 border-brand-dark/30 border-t-brand-dark rounded-full animate-spin" />Signing in...</>) : 'Sign In'}
           </button>
         </form>

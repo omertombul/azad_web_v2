@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Link href="/" className="flex items-center gap-3 mb-8 group">
               <div className="relative">
-                <img src="/images/logo.png" alt="AZAD Construction" className="h-14 w-auto rounded-lg transition-transform duration-300 group-hover:scale-105" />
+                <img src="/images/logo.png" alt="AZAD Construction" className="h-[120px] w-auto rounded-lg transition-transform duration-300 group-hover:scale-105" />
                 <div className="absolute inset-0 rounded-lg ring-1 ring-white/10" />
               </div>
               <div className="flex flex-col">

@@ -94,7 +94,7 @@ export default function Home() {
               <ul className="space-y-4 mb-10">
                 {[t('about.bullet1'), t('about.bullet2'), t('about.bullet3'), t('about.bullet4')].map((item, i) => (
                   <motion.li key={item} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }} className="flex items-center gap-3 text-sm text-gray-600">
-                    <span className="w-6 h-6 rounded-full bg-brand-gold/10 text-brand-gold flex items-center justify-center text-xs flex-shrink-0">
+                    <span className="w-6 h-6 rounded-full bg-brand-dark/10 text-brand-dark flex items-center justify-center text-xs flex-shrink-0">
                       <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                     </span>
                     {item}
@@ -128,7 +128,7 @@ export default function Home() {
             {services.map((s, i) => (<ServiceCard key={s.id} service={s} index={i} />))}
           </div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="text-center mt-14">
-            <Link href="/services" className="inline-flex items-center gap-2 border-2 border-brand-gold text-brand-gold font-semibold px-8 py-3.5 rounded-full hover:bg-brand-gold hover:text-white transition-all duration-300 text-sm group">
+            <Link href="/services" className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark font-semibold px-8 py-3.5 rounded-full hover:bg-brand-dark hover:text-white transition-all duration-300 text-sm group">
               {t('servicesPreview.viewAll')}
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
@@ -144,7 +144,7 @@ export default function Home() {
             {projects.map((p, i) => (<ProjectCard key={p.id} project={p} index={i} onClick={() => setSelectedProject(p)} />))}
           </div>
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.3 }} className="text-center mt-14">
-            <Link href="/projects" className="inline-flex items-center gap-2 border-2 border-brand-gold text-brand-gold font-semibold px-8 py-3.5 rounded-full hover:bg-brand-gold hover:text-white transition-all duration-300 text-sm group">
+            <Link href="/projects" className="inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark font-semibold px-8 py-3.5 rounded-full hover:bg-brand-dark hover:text-white transition-all duration-300 text-sm group">
               {t('projectsPreview.viewAll')}
               <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
             </Link>
@@ -160,7 +160,7 @@ export default function Home() {
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
           <h2 className="text-3xl sm:text-5xl font-black text-white mb-6 leading-tight">{t('ctaBanner.title')}</h2>
           <p className="text-white/50 text-lg mb-10 leading-relaxed">{t('ctaBanner.subtitle')}</p>
-          <Link href="/contact" className="inline-flex items-center gap-2 bg-brand-gold text-brand-dark font-bold px-10 py-4 rounded-full hover:bg-brand-darkgold transition-all duration-300 text-sm shadow-lg shadow-brand-gold/20 hover:shadow-xl hover:shadow-brand-gold/30 hover:scale-[1.02]">
+          <Link href="/contact" className="inline-flex items-center gap-2 bg-white text-brand-dark font-bold px-10 py-4 rounded-full hover:bg-brand-darkgold transition-all duration-300 text-sm shadow-lg shadow-white/20 hover:shadow-xl hover:shadow-white/30 hover:scale-[1.02]">
             {t('ctaBanner.cta')}
           </Link>
         </motion.div>

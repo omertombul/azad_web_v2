@@ -46,7 +46,7 @@ export default function HeroSection({ title, subtitle, ctaLabel, ctaTo, secondar
         <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-brand-gold/5 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-gold/3 rounded-full blur-[120px]" />
       </div>
-      <div className="absolute inset-0 z-15 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(rgba(212,175,55,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(212,175,55,0.3) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
+      <div className="absolute inset-0 z-15 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
 
       <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24">
         <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="inline-flex items-center gap-2 border border-brand-gold/30 text-brand-gold/90 text-[11px] font-semibold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-8 backdrop-blur-sm bg-brand-gold/5">
@@ -65,7 +65,7 @@ export default function HeroSection({ title, subtitle, ctaLabel, ctaTo, secondar
         </motion.p>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.8 }} className="flex flex-wrap gap-4 justify-center">
-          <Link href={ctaTo} className="group relative bg-brand-gold text-brand-dark font-bold px-8 py-4 rounded-full hover:bg-brand-darkgold transition-all duration-300 text-sm tracking-wide shadow-lg shadow-brand-gold/20 hover:shadow-xl hover:shadow-brand-gold/30 hover:scale-[1.02]">
+          <Link href={ctaTo} className="group relative bg-white text-brand-dark font-bold px-8 py-4 rounded-full hover:bg-brand-darkgold transition-all duration-300 text-sm tracking-wide shadow-lg shadow-white/20 hover:shadow-xl hover:shadow-white/30 hover:scale-[1.02]">
             {ctaLabel}
           </Link>
           {secondaryLabel && secondaryTo && (

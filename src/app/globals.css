@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand-gold: #D4AF37;
-  --color-brand-darkgold: #996515;
+  --color-brand-gold: #FFFFFF;
+  --color-brand-darkgold: #E0E0E0;
   --color-brand-dark: #0A0A0A;
   --color-brand-gray: #141414;
   --color-brand-lightgray: #F7F7F5;
@@ -52,7 +52,7 @@ body {
 
 /* Gradient text */
 .text-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #F5E6A3 50%, #D4AF37 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #E0E0E0 50%, #FFFFFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -68,7 +68,7 @@ body {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, #D4AF37, transparent, #D4AF37);
+  background: linear-gradient(135deg, #FFFFFF, transparent, #FFFFFF);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
@@ -88,7 +88,7 @@ body {
 
 /* Glow effect */
 .glow-gold {
-  box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15);
 }
 
 /* Smooth image zoom */
@@ -118,5 +118,5 @@ body {
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #D4AF37;
+  background: #CCCCCC;
 }

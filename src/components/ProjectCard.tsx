@@ -47,17 +47,17 @@ export default function ProjectCard({ project, index = 0, onClick }: ProjectCard
             {imageCount}
           </span>
         )}
-        <span className="absolute top-4 right-4 bg-brand-gold/90 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-sm">
+        <span className="absolute top-4 right-4 bg-brand-dark/90 backdrop-blur-sm text-white text-[10px] font-bold px-3 py-1.5 rounded-full shadow-sm">
           {project.year}
         </span>
       </div>
       <div className="p-6">
-        <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-darkgold transition-colors duration-300">
+        <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-dark transition-colors duration-300">
           {project.title}
         </h3>
         <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">{project.description}</p>
       </div>
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-gold to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-dark to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
     </motion.div>
   )
 }

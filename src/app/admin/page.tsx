@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import type { Project, Service } from '@/types'
 import MultiImageUploader from '@/components/MultiImageUploader'
 
-const PROJECT_CATEGORIES = ['Kitchen', 'Bathroom', 'Basement', 'Interior', 'Addition']
+const PROJECT_CATEGORIES = ['Kitchen', 'Bathroom', 'Basement', 'Interior', 'Addition', 'Landscaping']
 const ICON_OPTIONS = ['kitchen', 'bath', 'building', 'addition', 'paint', 'floor', 'landscape', 'deck', 'roof', 'window', 'electric', 'plumbing', 'hvac', 'exterior', 'fence', 'drywall', 'garage', 'gutter']
 
 type Tab = 'dashboard' | 'projects' | 'services'
@@ -29,8 +29,8 @@ export default function Admin() {
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
   const [showNewProject, setShowNewProject] = useState(false)
   const [showNewService, setShowNewService] = useState(false)
-  const [newProject, setNewProject] = useState({ title: '', year: new Date().getFullYear(), category: 'Kitchen', description: '', image: '', images: [] as string[] })
-  const [newService, setNewService] = useState({ title: '', description: '', icon: 'building' })
+  const [newProject, setNewProject] = useState({ title: '', title_fr: '', year: new Date().getFullYear(), category: 'Kitchen', description: '', description_fr: '', image: '', images: [] as string[] })
+  const [newService, setNewService] = useState({ title: '', title_fr: '', description: '', description_fr: '', icon: 'building' })
 
   useEffect(() => {
     const token = localStorage.getItem('admin_token')
@@ -66,7 +66,7 @@ export default function Admin() {
       const res = await apiFetch('/api/projects', { method: 'POST', body: JSON.stringify(payload) })
       const data = await res.json()
       setProjects((prev) => [...prev, data])
-      setNewProject({ title: '', year: new Date().getFullYear(), category: 'Kitchen', description: '', image: '', images: [] })
+      setNewProject({ title: '', title_fr: '', year: new Date().getFullYear(), category: 'Kitchen', description: '', description_fr: '', image: '', images: [] })
       setShowNewProject(false); flash('ok', `"${data.title}" created`)
     } catch { flash('err', 'Failed to create project') } finally { setSaving(null) }
   }
@@ -96,7 +96,7 @@ export default function Admin() {
       const res = await apiFetch('/api/services', { method: 'POST', body: JSON.stringify(newService) })
       const data = await res.json()
       setServices((prev) => [...prev, data])
-      setNewService({ title: '', description: '', icon: 'building' }); setShowNewService(false); flash('ok', `"${data.title}" created`)
+      setNewService({ title: '', title_fr: '', description: '', description_fr: '', icon: 'building' }); setShowNewService(false); flash('ok', `"${data.title}" created`)
     } catch { flash('err', 'Failed to create service') } finally { setSaving(null) }
   }
 
@@ -228,11 +228,17 @@ export default function Admin() {
                 <div className="bg-white rounded-2xl border-2 border-brand-gold/30 shadow-lg p-6 mb-6">
                   <div className="flex items-center justify-between mb-5"><h3 className="font-bold text-brand-dark text-lg">New Project</h3><button onClick={() => setShowNewProject(false)} className="text-gray-400 hover:text-gray-600"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg></button></div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div><label className={labelClass}>Project Name</label><input type="text" value={newProject.title} onChange={(e) => setNewProject({ ...newProject, title: e.target.value })} placeholder="e.g. Modern Kitchen Overhaul" className={inputClass} /></div>
+                    <div><label className={labelClass}>Project Name (EN)</label><input type="text" value={newProject.title} onChange={(e) => setNewProject({ ...newProject, title: e.target.value })} placeholder="e.g. Modern Kitchen Overhaul" className={inputClass} /></div>
+                    <div><label className={labelClass}>Project Name (FR)</label><input type="text" value={newProject.title_fr} onChange={(e) => setNewProject({ ...newProject, title_fr: e.target.value })} placeholder="ex. Rénovation de cuisine moderne" className={inputClass} /></div>
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                     <div className="flex gap-4"><div className="flex-1"><label className={labelClass}>Year</label><input type="number" value={newProject.year} onChange={(e) => setNewProject({ ...newProject, year: parseInt(e.target.value) || 0 })} className={inputClass} /></div><div className="flex-1"><label className={labelClass}>Category</label><select value={newProject.category} onChange={(e) => setNewProject({ ...newProject, category: e.target.value })} className={inputClass}>{PROJECT_CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}</select></div></div>
                   </div>
                   <div className="mb-4"><label className={labelClass}>Project Images</label><MultiImageUploader images={newProject.images} onChange={(imgs) => setNewProject({ ...newProject, images: imgs, image: imgs[0] || '' })} /></div>
-                  <div className="mb-4"><label className={labelClass}>Description</label><textarea rows={3} value={newProject.description} onChange={(e) => setNewProject({ ...newProject, description: e.target.value })} placeholder="Describe the project..." className={inputClass + ' resize-vertical'} /></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div><label className={labelClass}>Description (EN)</label><textarea rows={3} value={newProject.description} onChange={(e) => setNewProject({ ...newProject, description: e.target.value })} placeholder="Describe the project..." className={inputClass + ' resize-vertical'} /></div>
+                    <div><label className={labelClass}>Description (FR)</label><textarea rows={3} value={newProject.description_fr} onChange={(e) => setNewProject({ ...newProject, description_fr: e.target.value })} placeholder="Décrivez le projet..." className={inputClass + ' resize-vertical'} /></div>
+                  </div>
                   <div className="flex justify-end gap-3">
                     <button onClick={() => setShowNewProject(false)} className="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-500 hover:bg-gray-100 transition-colors">Cancel</button>
                     <button onClick={createProject} disabled={!newProject.title || saving === 'new-proj'} className="bg-brand-gold text-brand-dark font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-brand-darkgold transition-colors disabled:opacity-50">{saving === 'new-proj' ? 'Creating...' : 'Create Project'}</button>
@@ -248,11 +254,17 @@ export default function Admin() {
                         <button onClick={() => setConfirmDelete(`proj-${proj.id}`)} className="text-gray-300 hover:text-red-500 transition-colors p-1" title="Delete project"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg></button>
                       </div>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                        <div><label className={labelClass}>Project Name</label><input type="text" value={proj.title} onChange={(e) => updateProjectField(proj.id, 'title', e.target.value)} className={inputClass} /></div>
+                        <div><label className={labelClass}>Project Name (EN)</label><input type="text" value={proj.title} onChange={(e) => updateProjectField(proj.id, 'title', e.target.value)} className={inputClass} /></div>
+                        <div><label className={labelClass}>Project Name (FR)</label><input type="text" value={proj.title_fr || ''} onChange={(e) => updateProjectField(proj.id, 'title_fr', e.target.value)} className={inputClass} /></div>
+                      </div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                         <div className="flex gap-4"><div className="flex-1"><label className={labelClass}>Year</label><input type="number" value={proj.year} onChange={(e) => updateProjectField(proj.id, 'year', parseInt(e.target.value) || 0)} className={inputClass} /></div><div className="flex-1"><label className={labelClass}>Category</label><select value={proj.category} onChange={(e) => updateProjectField(proj.id, 'category', e.target.value)} className={inputClass}>{PROJECT_CATEGORIES.map((c) => <option key={c} value={c}>{c}</option>)}</select></div></div>
                       </div>
                       <div className="mb-4"><label className={labelClass}>Project Images</label><MultiImageUploader images={proj.images || []} onChange={(imgs) => updateProjectImages(proj.id, imgs)} /></div>
-                      <div className="mb-4"><label className={labelClass}>Description</label><textarea rows={2} value={proj.description} onChange={(e) => updateProjectField(proj.id, 'description', e.target.value)} className={inputClass + ' resize-vertical'} /></div>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div><label className={labelClass}>Description (EN)</label><textarea rows={2} value={proj.description} onChange={(e) => updateProjectField(proj.id, 'description', e.target.value)} className={inputClass + ' resize-vertical'} /></div>
+                        <div><label className={labelClass}>Description (FR)</label><textarea rows={2} value={proj.description_fr || ''} onChange={(e) => updateProjectField(proj.id, 'description_fr', e.target.value)} className={inputClass + ' resize-vertical'} /></div>
+                      </div>
                       <div className="flex justify-end">
                         <button onClick={() => saveProject(proj)} disabled={saving === `proj-${proj.id}`} className="flex items-center gap-2 bg-brand-dark text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-brand-gold hover:text-brand-dark transition-colors disabled:opacity-50">
                           {saving === `proj-${proj.id}` ? (<><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />Saving...</>) : (<><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Save Changes</>)}
@@ -277,10 +289,14 @@ export default function Admin() {
                 <div className="bg-white rounded-2xl border-2 border-brand-gold/30 shadow-lg p-6 mb-6">
                   <div className="flex items-center justify-between mb-5"><h3 className="font-bold text-brand-dark text-lg">New Service</h3><button onClick={() => setShowNewService(false)} className="text-gray-400 hover:text-gray-600"><svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg></button></div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div><label className={labelClass}>Service Name</label><input type="text" value={newService.title} onChange={(e) => setNewService({ ...newService, title: e.target.value })} placeholder="e.g. Kitchen Remodeling" className={inputClass} /></div>
-                    <div><label className={labelClass}>Icon</label><select value={newService.icon} onChange={(e) => setNewService({ ...newService, icon: e.target.value })} className={inputClass}>{ICON_OPTIONS.map((icon) => <option key={icon} value={icon}>{icon.charAt(0).toUpperCase() + icon.slice(1)}</option>)}</select></div>
+                    <div><label className={labelClass}>Service Name (EN)</label><input type="text" value={newService.title} onChange={(e) => setNewService({ ...newService, title: e.target.value })} placeholder="e.g. Kitchen Remodeling" className={inputClass} /></div>
+                    <div><label className={labelClass}>Service Name (FR)</label><input type="text" value={newService.title_fr} onChange={(e) => setNewService({ ...newService, title_fr: e.target.value })} placeholder="ex. Rénovation de cuisine" className={inputClass} /></div>
                   </div>
-                  <div className="mb-4"><label className={labelClass}>Description</label><textarea rows={3} value={newService.description} onChange={(e) => setNewService({ ...newService, description: e.target.value })} placeholder="Describe the service..." className={inputClass + ' resize-vertical'} /></div>
+                  <div className="mb-4"><label className={labelClass}>Icon</label><select value={newService.icon} onChange={(e) => setNewService({ ...newService, icon: e.target.value })} className={inputClass}>{ICON_OPTIONS.map((icon) => <option key={icon} value={icon}>{icon.charAt(0).toUpperCase() + icon.slice(1)}</option>)}</select></div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div><label className={labelClass}>Description (EN)</label><textarea rows={3} value={newService.description} onChange={(e) => setNewService({ ...newService, description: e.target.value })} placeholder="Describe the service..." className={inputClass + ' resize-vertical'} /></div>
+                    <div><label className={labelClass}>Description (FR)</label><textarea rows={3} value={newService.description_fr} onChange={(e) => setNewService({ ...newService, description_fr: e.target.value })} placeholder="Décrivez le service..." className={inputClass + ' resize-vertical'} /></div>
+                  </div>
                   <div className="flex justify-end gap-3">
                     <button onClick={() => setShowNewService(false)} className="px-5 py-2.5 rounded-xl text-sm font-semibold text-gray-500 hover:bg-gray-100 transition-colors">Cancel</button>
                     <button onClick={createService} disabled={!newService.title || saving === 'new-svc'} className="bg-brand-gold text-brand-dark font-bold px-6 py-2.5 rounded-xl text-sm hover:bg-brand-darkgold transition-colors disabled:opacity-50">{saving === 'new-svc' ? 'Creating...' : 'Create Service'}</button>
@@ -296,10 +312,14 @@ export default function Admin() {
                     </div>
                     <div className="space-y-4">
                       <div className="grid grid-cols-2 gap-4">
-                        <div><label className={labelClass}>Service Name</label><input type="text" value={svc.title} onChange={(e) => updateServiceField(svc.id, 'title', e.target.value)} className={inputClass} /></div>
-                        <div><label className={labelClass}>Icon</label><select value={svc.icon} onChange={(e) => updateServiceField(svc.id, 'icon', e.target.value)} className={inputClass}>{ICON_OPTIONS.map((icon) => <option key={icon} value={icon}>{icon.charAt(0).toUpperCase() + icon.slice(1)}</option>)}</select></div>
+                        <div><label className={labelClass}>Service Name (EN)</label><input type="text" value={svc.title} onChange={(e) => updateServiceField(svc.id, 'title', e.target.value)} className={inputClass} /></div>
+                        <div><label className={labelClass}>Service Name (FR)</label><input type="text" value={svc.title_fr || ''} onChange={(e) => updateServiceField(svc.id, 'title_fr', e.target.value)} className={inputClass} /></div>
                       </div>
-                      <div><label className={labelClass}>Description</label><textarea rows={2} value={svc.description} onChange={(e) => updateServiceField(svc.id, 'description', e.target.value)} className={inputClass + ' resize-vertical'} /></div>
+                      <div><label className={labelClass}>Icon</label><select value={svc.icon} onChange={(e) => updateServiceField(svc.id, 'icon', e.target.value)} className={inputClass}>{ICON_OPTIONS.map((icon) => <option key={icon} value={icon}>{icon.charAt(0).toUpperCase() + icon.slice(1)}</option>)}</select></div>
+                      <div className="grid grid-cols-2 gap-4">
+                        <div><label className={labelClass}>Description (EN)</label><textarea rows={2} value={svc.description} onChange={(e) => updateServiceField(svc.id, 'description', e.target.value)} className={inputClass + ' resize-vertical'} /></div>
+                        <div><label className={labelClass}>Description (FR)</label><textarea rows={2} value={svc.description_fr || ''} onChange={(e) => updateServiceField(svc.id, 'description_fr', e.target.value)} className={inputClass + ' resize-vertical'} /></div>
+                      </div>
                       <div className="flex justify-end">
                         <button onClick={() => saveService(svc)} disabled={saving === `svc-${svc.id}`} className="flex items-center gap-2 bg-brand-dark text-white px-6 py-2.5 rounded-xl text-sm font-bold hover:bg-brand-gold hover:text-brand-dark transition-colors disabled:opacity-50">
                           {saving === `svc-${svc.id}` ? (<><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />Saving...</>) : (<><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>Save Changes</>)}

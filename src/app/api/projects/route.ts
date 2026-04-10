@@ -19,9 +19,11 @@ export async function POST(request: NextRequest) {
   const project = await prisma.project.create({
     data: {
       title: body.title,
+      title_fr: body.title_fr || '',
       year: body.year,
       category: body.category,
       description: body.description,
+      description_fr: body.description_fr || '',
       image: body.image,
       images: JSON.stringify(body.images || []),
     },

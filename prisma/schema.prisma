@@ -8,18 +8,22 @@ datasource db {
 }
 
 model Project {
-  id          Int    @id @default(autoincrement())
-  title       String
-  year        Int
-  category    String
-  description String
-  image       String
-  images      String @default("[]")
+  id              Int    @id @default(autoincrement())
+  title           String
+  title_fr        String @default("")
+  year            Int
+  category        String
+  description     String
+  description_fr  String @default("")
+  image           String
+  images          String @default("[]")
 }
 
 model Service {
-  id          Int    @id @default(autoincrement())
-  title       String
-  description String
-  icon        String
+  id              Int    @id @default(autoincrement())
+  title           String
+  title_fr        String @default("")
+  description     String
+  description_fr  String @default("")
+  icon            String
 }

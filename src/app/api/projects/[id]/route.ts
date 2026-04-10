@@ -16,6 +16,8 @@ export async function PUT(
   if (body.year !== undefined) data.year = body.year
   if (body.category !== undefined) data.category = body.category
   if (body.description !== undefined) data.description = body.description
+  if (body.title_fr !== undefined) data.title_fr = body.title_fr
+  if (body.description_fr !== undefined) data.description_fr = body.description_fr
   if (body.image !== undefined) data.image = body.image
   if (body.images !== undefined) data.images = JSON.stringify(body.images)
 

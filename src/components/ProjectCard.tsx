@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { useTranslations, useLocale } from 'next-intl'
 import type { Project } from '@/types'
 
 interface ProjectCardProps {
@@ -8,8 +9,22 @@ interface ProjectCardProps {
   onClick?: () => void
 }
 
+const categoryKeys: Record<string, string> = {
+  Kitchen: 'filterKitchen',
+  Bathroom: 'filterBathroom',
+  Basement: 'filterBasement',
+  Interior: 'filterInterior',
+  Addition: 'filterAddition',
+  Landscaping: 'filterLandscaping',
+}
+
 export default function ProjectCard({ project, index = 0, onClick }: ProjectCardProps) {
+  const t = useTranslations('projectsPage')
+  const locale = useLocale()
   const imageCount = project.images?.length || 0
+  const categoryLabel = categoryKeys[project.category] ? t(categoryKeys[project.category]) : project.category
+  const title = locale === 'fr' && project.title_fr ? project.title_fr : project.title
+  const description = locale === 'fr' && project.description_fr ? project.description_fr : project.description
 
   return (
     <motion.div
@@ -37,7 +52,7 @@ export default function ProjectCard({ project, index = 0, onClick }: ProjectCard
           </div>
         </div>
         <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-brand-dark text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-sm">
-          {project.category}
+          {categoryLabel}
         </span>
         {imageCount > 1 && (
           <span className="absolute bottom-4 right-4 bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
@@ -53,9 +68,9 @@ export default function ProjectCard({ project, index = 0, onClick }: ProjectCard
       </div>
       <div className="p-6">
         <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-dark transition-colors duration-300">
-          {project.title}
+          {title}
         </h3>
-        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">{project.description}</p>
+        <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">{description}</p>
       </div>
       <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-brand-dark to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
     </motion.div>

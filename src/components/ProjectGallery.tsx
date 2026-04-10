@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLocale } from 'next-intl'
 import type { Project } from '@/types'
 
 interface ProjectGalleryProps {
@@ -9,8 +10,11 @@ interface ProjectGalleryProps {
 }
 
 export default function ProjectGallery({ project, onClose }: ProjectGalleryProps) {
+  const locale = useLocale()
   const images = project.images?.length ? project.images : [project.image]
   const [current, setCurrent] = useState(0)
+  const title = locale === 'fr' && project.title_fr ? project.title_fr : project.title
+  const description = locale === 'fr' && project.description_fr ? project.description_fr : project.description
 
   const prev = useCallback(() => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1)), [images.length])
   const next = useCallback(() => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1)), [images.length])
@@ -39,7 +43,7 @@ export default function ProjectGallery({ project, onClose }: ProjectGalleryProps
     >
       <div className="flex items-center justify-between px-6 py-4 flex-shrink-0" onClick={(e) => e.stopPropagation()}>
         <div>
-          <h2 className="text-white font-bold text-lg">{project.title}</h2>
+          <h2 className="text-white font-bold text-lg">{title}</h2>
           <p className="text-white/40 text-sm">{project.category} &middot; {project.year}</p>
         </div>
         <div className="flex items-center gap-4">
@@ -98,7 +102,7 @@ export default function ProjectGallery({ project, onClose }: ProjectGalleryProps
       )}
 
       <div className="px-6 pb-6 flex-shrink-0 text-center" onClick={(e) => e.stopPropagation()}>
-        <p className="text-white/50 text-sm max-w-2xl mx-auto">{project.description}</p>
+        <p className="text-white/50 text-sm max-w-2xl mx-auto">{description}</p>
       </div>
     </motion.div>
   )

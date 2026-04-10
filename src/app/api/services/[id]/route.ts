@@ -13,7 +13,9 @@ export async function PUT(
   const body = await request.json()
   const data: Record<string, unknown> = {}
   if (body.title !== undefined) data.title = body.title
+  if (body.title_fr !== undefined) data.title_fr = body.title_fr
   if (body.description !== undefined) data.description = body.description
+  if (body.description_fr !== undefined) data.description_fr = body.description_fr
   if (body.icon !== undefined) data.icon = body.icon
 
   try {

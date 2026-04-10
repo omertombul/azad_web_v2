@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import { useLocale } from 'next-intl'
 import type { Service } from '@/types'
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -29,6 +30,9 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, index = 0 }: ServiceCardProps) {
+  const locale = useLocale()
+  const title = locale === 'fr' && service.title_fr ? service.title_fr : service.title
+  const description = locale === 'fr' && service.description_fr ? service.description_fr : service.description
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -41,9 +45,9 @@ export default function ServiceCard({ service, index = 0 }: ServiceCardProps) {
         {iconMap[service.icon] ?? iconMap['building']}
       </div>
       <h3 className="text-lg font-bold text-brand-dark mb-2 group-hover:text-brand-dark transition-colors duration-300">
-        {service.title}
+        {title}
       </h3>
-      <p className="text-sm text-gray-500 leading-relaxed">{service.description}</p>
+      <p className="text-sm text-gray-500 leading-relaxed">{description}</p>
       <div className="mt-4 flex items-center gap-1 text-brand-dark text-xs font-semibold opacity-0 group-hover:opacity-100 translate-x-[-10px] group-hover:translate-x-0 transition-all duration-300">
         <span>Learn more</span>
         <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

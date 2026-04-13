@@ -10,12 +10,18 @@ interface ProjectCardProps {
 }
 
 const categoryKeys: Record<string, string> = {
-  Kitchen: 'filterKitchen',
-  Bathroom: 'filterBathroom',
-  Basement: 'filterBasement',
-  Interior: 'filterInterior',
-  Addition: 'filterAddition',
   Landscaping: 'filterLandscaping',
+  'Project Management': 'filterProjectManagement',
+  'Basement Finishing': 'filterBasementFinishing',
+  Masonry: 'filterMasonry',
+  'Interior Renovation': 'filterInteriorRenovation',
+  'Exterior Renovation': 'filterExteriorRenovation',
+  Bathroom: 'filterBathroom',
+  Extension: 'filterExtension',
+  'Demolition & Excavation': 'filterDemolitionExcavation',
+  'Interior Systems': 'filterInteriorSystems',
+  'New Construction': 'filterNewConstruction',
+  Foundation: 'filterFoundation',
 }
 
 export default function ProjectCard({ project, index = 0, onClick }: ProjectCardProps) {

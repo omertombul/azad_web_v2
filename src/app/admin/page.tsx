@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import type { Project, Service } from '@/types'
 import MultiImageUploader from '@/components/MultiImageUploader'
 
-const PROJECT_CATEGORIES = ['Kitchen', 'Bathroom', 'Basement', 'Interior', 'Addition', 'Landscaping']
+const PROJECT_CATEGORIES = ['Landscaping', 'Project Management', 'Basement Finishing', 'Masonry', 'Interior Renovation', 'Exterior Renovation', 'Bathroom', 'Extension', 'Demolition & Excavation', 'Interior Systems', 'New Construction', 'Foundation']
 const ICON_OPTIONS = ['kitchen', 'bath', 'building', 'addition', 'paint', 'floor', 'landscape', 'deck', 'roof', 'window', 'electric', 'plumbing', 'hvac', 'exterior', 'fence', 'drywall', 'garage', 'gutter']
 
 type Tab = 'dashboard' | 'projects' | 'services'
@@ -29,7 +29,7 @@ export default function Admin() {
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
   const [showNewProject, setShowNewProject] = useState(false)
   const [showNewService, setShowNewService] = useState(false)
-  const [newProject, setNewProject] = useState({ title: '', title_fr: '', year: new Date().getFullYear(), category: 'Kitchen', description: '', description_fr: '', image: '', images: [] as string[] })
+  const [newProject, setNewProject] = useState({ title: '', title_fr: '', year: new Date().getFullYear(), category: 'Landscaping', description: '', description_fr: '', image: '', images: [] as string[] })
   const [newService, setNewService] = useState({ title: '', title_fr: '', description: '', description_fr: '', icon: 'building' })
 
   useEffect(() => {
@@ -66,7 +66,7 @@ export default function Admin() {
       const res = await apiFetch('/api/projects', { method: 'POST', body: JSON.stringify(payload) })
       const data = await res.json()
       setProjects((prev) => [...prev, data])
-      setNewProject({ title: '', title_fr: '', year: new Date().getFullYear(), category: 'Kitchen', description: '', description_fr: '', image: '', images: [] })
+      setNewProject({ title: '', title_fr: '', year: new Date().getFullYear(), category: 'Landscaping', description: '', description_fr: '', image: '', images: [] })
       setShowNewProject(false); flash('ok', `"${data.title}" created`)
     } catch { flash('err', 'Failed to create project') } finally { setSaving(null) }
   }

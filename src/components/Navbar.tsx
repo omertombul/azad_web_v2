@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'glass shadow-lg shadow-black/10 border-b border-white/5' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        <div className="flex items-center justify-between h-28 md:h-36">
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 group">
             <div className="relative">
               <img src="/images/logo.png" alt="AZAD Construction" className="h-24 md:h-[120px] w-auto rounded-lg transition-transform duration-300 group-hover:scale-105" />
@@ -46,7 +46,7 @@ export default function Navbar() {
             </div>
             <div className="flex flex-col">
               <span className="text-gradient font-black text-xl md:text-2xl leading-none tracking-tight">AZAD</span>
-              <span className="text-white/60 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Constructions INC.</span>
+              <span className="text-white/60 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Construction INC.</span>
             </div>
           </Link>
 

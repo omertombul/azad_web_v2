@@ -80,11 +80,18 @@
     "subtitle": "From kitchen remodels to full home makeovers — every project is a reflection of our commitment to quality and our clients' vision.",
     "loading": "Loading projects...",
     "filterAll": "All",
-    "filterKitchen": "Kitchen",
+    "filterLandscaping": "Landscaping",
+    "filterProjectManagement": "Project Management",
+    "filterBasementFinishing": "Basement Finishing",
+    "filterMasonry": "Masonry",
+    "filterInteriorRenovation": "Interior Renovation",
+    "filterExteriorRenovation": "Exterior Renovation",
     "filterBathroom": "Bathroom",
-    "filterBasement": "Basement",
-    "filterInterior": "Interior",
-    "filterAddition": "Addition"
+    "filterExtension": "Extension",
+    "filterDemolitionExcavation": "Demolition & Excavation",
+    "filterInteriorSystems": "Interior Systems",
+    "filterNewConstruction": "New Construction",
+    "filterFoundation": "Foundation"
   },
   "contactPage": {
     "label": "Get In Touch",

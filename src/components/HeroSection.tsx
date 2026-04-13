@@ -48,7 +48,7 @@ export default function HeroSection({ title, subtitle, ctaLabel, ctaTo, secondar
       </div>
       <div className="absolute inset-0 z-15 opacity-[0.03] pointer-events-none" style={{ backgroundImage: `linear-gradient(rgba(255,255,255,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.3) 1px, transparent 1px)`, backgroundSize: '60px 60px' }} />
 
-      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-24">
+      <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-36">
         <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }} className="inline-flex items-center gap-2 border border-brand-gold/30 text-brand-gold/90 text-[11px] font-semibold uppercase tracking-[0.2em] px-5 py-2 rounded-full mb-8 backdrop-blur-sm bg-brand-gold/5">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
           {t('hero.badge')}

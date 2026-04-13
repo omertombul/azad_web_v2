@@ -18,7 +18,7 @@ export default function Footer() {
               </div>
               <div className="flex flex-col">
                 <span className="text-gradient font-black text-2xl leading-none tracking-tight">AZAD</span>
-                <span className="text-white/40 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Constructions</span>
+                <span className="text-white/40 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Construction</span>
               </div>
             </Link>
             <p className="text-sm leading-relaxed max-w-sm text-white/30 mb-8">{t('footer.description')}</p>
@@ -56,11 +56,11 @@ export default function Footer() {
             <ul className="space-y-4 text-sm">
               <li className="flex items-center gap-3">
                 <span className="text-brand-gold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></span>
-                <span className="text-white/40">(312) 555-0198</span>
+                <a href="tel:+15145310673" className="text-white/40 hover:text-white transition-colors">(514) 531-0673</a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-brand-gold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></span>
-                <span className="text-white/40">info@azadrenovations.com</span>
+                <a href="mailto:azadconstruction@outlook.com" className="text-white/40 hover:text-white transition-colors">azadconstruction@outlook.com</a>
               </li>
               <li className="flex items-center gap-3">
                 <span className="text-brand-gold"><svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></span>

@@ -80,11 +80,18 @@
     "subtitle": "Des rénovations de cuisine aux transformations complètes — chaque projet reflète notre engagement envers la qualité et la vision de nos clients.",
     "loading": "Chargement des projets...",
     "filterAll": "Tous",
-    "filterKitchen": "Cuisine",
+    "filterLandscaping": "Aménagement paysager",
+    "filterProjectManagement": "Gestion de projet",
+    "filterBasementFinishing": "Finition sous-sol",
+    "filterMasonry": "Maçonnerie",
+    "filterInteriorRenovation": "Rénovation intérieur",
+    "filterExteriorRenovation": "Rénovation extérieur",
     "filterBathroom": "Salle de bain",
-    "filterBasement": "Sous-sol",
-    "filterInterior": "Intérieur",
-    "filterAddition": "Ajout"
+    "filterExtension": "Agrandissement",
+    "filterDemolitionExcavation": "Démolition et excavation",
+    "filterInteriorSystems": "Système intérieur",
+    "filterNewConstruction": "Construction neuve",
+    "filterFoundation": "Fondation"
   },
   "contactPage": {
     "label": "Nous joindre",

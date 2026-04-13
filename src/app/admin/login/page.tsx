@@ -54,7 +54,7 @@ export default function Login() {
             {loading ? (<><div className="w-4 h-4 border-2 border-brand-dark/30 border-t-brand-dark rounded-full animate-spin" />Signing in...</>) : 'Sign In'}
           </button>
         </form>
-        <p className="text-center text-white/20 text-xs mt-8">AZAD Constructions Inc &mdash; Admin Panel</p>
+        <p className="text-center text-white/20 text-xs mt-8">AZAD Construction Inc &mdash; Admin Panel</p>
       </div>
     </div>
   )

@@ -6,7 +6,7 @@ import ProjectCard from '@/components/ProjectCard'
 import ProjectGallery from '@/components/ProjectGallery'
 import type { Project } from '@/types'
 
-const CATEGORIES = ['All', 'Kitchen', 'Bathroom', 'Basement', 'Interior', 'Addition']
+const CATEGORIES = ['All', 'Landscaping', 'Project Management', 'Basement Finishing', 'Masonry', 'Interior Renovation', 'Exterior Renovation', 'Bathroom', 'Extension', 'Demolition & Excavation', 'Interior Systems', 'New Construction', 'Foundation']
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([])
@@ -18,11 +18,18 @@ export default function Projects() {
 
   const categoryLabels: Record<string, string> = {
     All: t('projectsPage.filterAll'),
-    Kitchen: t('projectsPage.filterKitchen'),
+    Landscaping: t('projectsPage.filterLandscaping'),
+    'Project Management': t('projectsPage.filterProjectManagement'),
+    'Basement Finishing': t('projectsPage.filterBasementFinishing'),
+    Masonry: t('projectsPage.filterMasonry'),
+    'Interior Renovation': t('projectsPage.filterInteriorRenovation'),
+    'Exterior Renovation': t('projectsPage.filterExteriorRenovation'),
     Bathroom: t('projectsPage.filterBathroom'),
-    Basement: t('projectsPage.filterBasement'),
-    Interior: t('projectsPage.filterInterior'),
-    Addition: t('projectsPage.filterAddition'),
+    Extension: t('projectsPage.filterExtension'),
+    'Demolition & Excavation': t('projectsPage.filterDemolitionExcavation'),
+    'Interior Systems': t('projectsPage.filterInteriorSystems'),
+    'New Construction': t('projectsPage.filterNewConstruction'),
+    Foundation: t('projectsPage.filterFoundation'),
   }
 
   useEffect(() => {

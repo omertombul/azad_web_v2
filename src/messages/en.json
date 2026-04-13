@@ -4,12 +4,14 @@
     "services": "Services",
     "projects": "Projects",
     "contact": "Contact",
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "brandLine1": "AZAD",
+    "brandLine2": "CONSTRUCTION INC."
   },
   "hero": {
-    "badge": "Licensed & Bonded Since 1998",
+    "badge": "Licensed & Bonded Since 2018",
     "title": "Your Home, Beautifully Reimagined",
-    "subtitle": "From kitchen remodels to full home makeovers, Azad Home Renovations delivers exceptional craftsmanship, transparent pricing, and results you'll love for years to come.",
+    "subtitle": "",
     "cta": "Get a Free Estimate",
     "secondary": "See Our Work"
   },

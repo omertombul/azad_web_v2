@@ -45,8 +45,8 @@ export default function Navbar() {
               <div className="absolute inset-0 rounded-lg ring-1 ring-white/10" />
             </div>
             <div className="flex flex-col">
-              <span className="text-gradient font-black text-xl md:text-2xl leading-none tracking-tight">AZAD</span>
-              <span className="text-white/60 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Construction INC.</span>
+              <span className="text-gradient font-black text-3xl md:text-4xl leading-none tracking-tight">{t('nav.brandLine1')}</span>
+              <span className="text-white font-bold text-lg md:text-xl leading-none tracking-[0.15em] uppercase mt-1">{t('nav.brandLine2')}</span>
             </div>
           </Link>
 
@@ -94,7 +94,7 @@ export default function Navbar() {
               })}
               <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: navLinks.length * 0.05 }}>
                 <button onClick={toggleLang} className="block w-full text-left px-4 py-3 rounded-xl text-sm font-medium tracking-wide text-white/70 hover:text-white hover:bg-white/5 transition-all">
-                  {locale === 'fr' ? 'English' : 'Francais'}
+                  {locale === 'fr' ? 'English' : 'Français'}
                 </button>
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: (navLinks.length + 1) * 0.05 }} className="pt-3">

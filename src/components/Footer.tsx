@@ -17,8 +17,8 @@ export default function Footer() {
                 <div className="absolute inset-0 rounded-lg ring-1 ring-white/10" />
               </div>
               <div className="flex flex-col">
-                <span className="text-gradient font-black text-2xl leading-none tracking-tight">AZAD</span>
-                <span className="text-white/40 font-light text-[10px] tracking-[0.3em] uppercase mt-0.5">Construction</span>
+                <span className="text-gradient font-black text-3xl md:text-4xl leading-none tracking-tight">{t('nav.brandLine1')}</span>
+                <span className="text-white font-bold text-lg md:text-xl leading-none tracking-[0.15em] uppercase mt-1">{t('nav.brandLine2')}</span>
               </div>
             </Link>
             <p className="text-sm leading-relaxed max-w-sm text-white/30 mb-8">{t('footer.description')}</p>

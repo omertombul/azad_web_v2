@@ -4,12 +4,14 @@
     "services": "Services",
     "projects": "Projets",
     "contact": "Contact",
-    "getQuote": "Obtenir un devis"
+    "getQuote": "Obtenir un devis",
+    "brandLine1": "CONSTRUCTION",
+    "brandLine2": "AZAD INC."
   },
   "hero": {
-    "badge": "Licencié et cautionné depuis 1998",
+    "badge": "Licencié et cautionné depuis 2018",
     "title": "Votre maison, magnifiquement réinventée",
-    "subtitle": "Des rénovations de cuisines aux transformations complètes, Azad Rénovations offre un savoir-faire exceptionnel, des prix transparents et des résultats dont vous profiterez pendant des années.",
+    "subtitle": "",
     "cta": "Estimation gratuite",
     "secondary": "Voir nos réalisations"
   },
